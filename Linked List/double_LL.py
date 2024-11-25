@@ -33,7 +33,18 @@ class DoubleLinkedList:
         self.head = new_node
 
     def insertInMiddle(self, data, pos):
-        pass
+        cur_pos = 0
+        cur_node = self.head
+        new_node = Node(data)
+
+        for _ in range(pos):
+            cur_node = cur_node.next
+
+        new_node.next = cur_node.next
+        new_node.prev = cur_node
+        cur_node.next.prev = new_node
+        cur_node.next = new_node
+
 
     def print_list(self):
         cur_pos = self.head
@@ -58,7 +69,8 @@ dll.insertAtEnd(3)
 
 arr = [5,7,8,2,4]
 create_dll_from_arr(arr, dll)
+dll.print_list()
 
-
+dll.insertInMiddle(6, 3)
 dll.print_list()
 
