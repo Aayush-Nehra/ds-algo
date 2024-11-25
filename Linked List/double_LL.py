@@ -45,6 +45,20 @@ class DoubleLinkedList:
         cur_node.next.prev = new_node
         cur_node.next = new_node
 
+    #Reverse a linked list - optimal
+    def revDLLOptimal(self):
+        """TC - O(n) SC-O(1)"""
+        cur_node = self.head
+        temp = None
+        while cur_node:
+            cur_node.prev = cur_node.next
+            cur_node.next = temp
+            temp = cur_node
+            
+            cur_node = cur_node.prev
+
+        self.head = temp
+
 
     def print_list(self):
         cur_pos = self.head
@@ -64,13 +78,20 @@ def create_dll_from_arr(arr, dll):
 dll = DoubleLinkedList()
 
 # inserting at end
-dll.insertAtEnd(1)
-dll.insertAtEnd(3)
+# dll.insertAtEnd(1)
+# dll.insertAtEnd(3)
 
-arr = [5,7,8,2,4]
+# arr = [5,7,8,2,4]
+# create_dll_from_arr(arr, dll)
+# dll.print_list()
+
+# dll.insertInMiddle(6, 3)
+
+#Reverse DLL
+arr = [1,2,3,4,5]
 create_dll_from_arr(arr, dll)
 dll.print_list()
 
-dll.insertInMiddle(6, 3)
+dll.revDLLOptimal()
 dll.print_list()
 
