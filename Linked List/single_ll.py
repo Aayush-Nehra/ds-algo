@@ -96,6 +96,12 @@ class Linked_List:
 
         print()
 
+def create_ll_from_arr(arr, ll):
+    for ele in arr:
+        #dll.insertAtEnd(ele)
+        ll.insert_at_end(ele)
+
+        
 ll = Linked_List()
 
 ll.insert_at_beginning(11)
