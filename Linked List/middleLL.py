@@ -9,9 +9,7 @@ def middleNode(head):
             fast_ptr = fast_ptr.next.next
         else:
             break
-        slow_ptr = slow_ptr.next
-        
-        
+        slow_ptr = slow_ptr.next     
     
     if fast_ptr.next == None:
         print(slow_ptr.data)

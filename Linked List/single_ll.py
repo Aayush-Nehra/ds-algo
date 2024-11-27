@@ -96,26 +96,26 @@ class Linked_List:
 
         print()
 
-def create_ll_from_arr(arr, ll):
-    for ele in arr:
-        #dll.insertAtEnd(ele)
-        ll.insert_at_end(ele)
+    def create_ll_from_arr(self, arr):
+        for ele in arr:
+            #dll.insertAtEnd(ele)
+            self.insert_at_end(ele)
 
-        
+
 ll = Linked_List()
 
-ll.insert_at_beginning(11)
-ll.insert_at_beginning(2)
-ll.insert_at_end(9)
-ll.insert_at_end(87)
-ll.insert_at_next_pos(9, 17)
-ll.insert_at_next_pos(87, 3)
-ll.update_node(11, 22)
-ll.update_node(2, 5)
-ll.print_list()
-ll.delete_from_begn()
-ll.print_list()
-ll.delete_from_end()
-ll.print_list()
-ll.delete_node_with_data(17)
-ll.print_list()
+# ll.insert_at_beginning(11)
+# ll.insert_at_beginning(2)
+# ll.insert_at_end(9)
+# ll.insert_at_end(87)
+# ll.insert_at_next_pos(9, 17)
+# ll.insert_at_next_pos(87, 3)
+# ll.update_node(11, 22)
+# ll.update_node(2, 5)
+# ll.print_list()
+# ll.delete_from_begn()
+# ll.print_list()
+# ll.delete_from_end()
+# ll.print_list()
+# ll.delete_node_with_data(17)
+# ll.print_list()
