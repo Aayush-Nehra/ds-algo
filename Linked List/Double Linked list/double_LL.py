@@ -68,30 +68,29 @@ class DoubleLinkedList:
 
         print()
 
-def create_dll_from_arr(arr, dll):
-    for ele in arr:
-        #dll.insertAtEnd(ele)
-        dll.insertAtBeginning(ele)
+    def create_dll_from_arr(self, arr):
+        for ele in arr:
+            self.insertAtEnd(ele)
 
 # Testing
 # Creating double linked list 
-dll = DoubleLinkedList()
+# dll = DoubleLinkedList()
 
-# inserting at end
-# dll.insertAtEnd(1)
-# dll.insertAtEnd(3)
+# # inserting at end
+# # dll.insertAtEnd(1)
+# # dll.insertAtEnd(3)
 
-# arr = [5,7,8,2,4]
+# # arr = [5,7,8,2,4]
+# # create_dll_from_arr(arr, dll)
+# # dll.print_list()
+
+# # dll.insertInMiddle(6, 3)
+
+# #Reverse DLL
+# arr = [1,2,3,4,5]
 # create_dll_from_arr(arr, dll)
 # dll.print_list()
 
-# dll.insertInMiddle(6, 3)
-
-#Reverse DLL
-arr = [1,2,3,4,5]
-create_dll_from_arr(arr, dll)
-dll.print_list()
-
-dll.revDLLOptimal()
-dll.print_list()
+# dll.revDLLOptimal()
+# dll.print_list()
 
